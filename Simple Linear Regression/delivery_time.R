@@ -7,6 +7,7 @@ boxplot(df$Delivery.Time)
 plot(df$Sorting.Time, df$Delivery.Time, main = "Scatter Plot")
 cor(df$Sorting.Time,df$Delivery.Time)
 summary(df)
+describe(df)
 is.na(df)
 
 #Linear Regression Model
