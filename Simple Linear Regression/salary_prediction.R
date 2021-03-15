@@ -7,6 +7,7 @@ boxplot(df$Salary)
 plot(df$YearsExperience, df$Salary, main="Scatter Plot")
 cor(df)
 summary(df)
+describe(df)
 is.na(df)
 
 #Linear Regression Model
