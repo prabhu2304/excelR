@@ -2,13 +2,16 @@ df <- read.csv("delivery_time.csv")
 View(df)
 
 #EDA
-boxplot(df$Sorting.Time)
-boxplot(df$Delivery.Time)
-plot(df$Sorting.Time, df$Delivery.Time, main = "Scatter Plot")
-cor(df$Sorting.Time,df$Delivery.Time)
 summary(df)
 describe(df)
 is.na(df)
+boxplot(df$Sorting.Time)
+boxplot(df$Delivery.Time)
+hist(df$Sorting.Time)
+hist(df$Delivery.Time)
+plot(df$Sorting.Time, df$Delivery.Time, main = "Scatter Plot")
+cor(df$Sorting.Time,df$Delivery.Time)
+
 
 #Linear Regression Model
 model <- lm(Delivery.Time~Sorting.Time, data=df)
