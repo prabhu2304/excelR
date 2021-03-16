@@ -1,16 +1,27 @@
 df <- read.csv("50_Startups.csv")
 View(df)
 library(psych)
-summary(df)
-describe(df)
-sum(is.na(df))
-
-
-#One Hot Encoding to Categorical Variable State
-install.packages("caret")
 library(lattice)
 library(ggplot2)
 library(caret)
+
+summary(df)
+describe(df)
+sum(is.na(df))
+cor(df[-4]) #excluding State column
+boxplot(df$R.D.Spend)
+hist(df$R.D.Spend)
+boxplot(df$Administration)
+hist(df$Administration)
+boxplot(df$Marketing.Spend)
+hist(df$Marketing.Spend)
+boxplot(df$Profit)
+hist(df$Profit)
+plot(df$R.D.Spend, df$Profit, main = "Scatter Plot")
+plot(df$Administration, df$Profit, main = "Scatter Plot")
+plot(df$Marketing.Spend, df$Profit, main = "Scatter Plot")
+
+#One Hot Encoding to Categorical Variable State
 dummy <- dummyVars(" ~ .", data=df)
 newdata <- data.frame(predict(dummy, newdata = df))
 new_df <- newdata[-4]
