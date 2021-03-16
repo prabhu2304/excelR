@@ -1,5 +1,6 @@
 df <- read.csv("Salary_Data.csv")
 View(df)
+library(psych)
 
 #EDA
 summary(df)
