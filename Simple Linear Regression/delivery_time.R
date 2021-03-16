@@ -1,6 +1,6 @@
 df <- read.csv("delivery_time.csv")
 View(df)
-
+library(psych)
 #EDA
 summary(df)
 describe(df)
