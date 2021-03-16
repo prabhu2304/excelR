@@ -2,13 +2,15 @@ df <- read.csv("Salary_Data.csv")
 View(df)
 
 #EDA
-boxplot(df$YearsExperience)
-boxplot(df$Salary)
-plot(df$YearsExperience, df$Salary, main="Scatter Plot")
-cor(df)
 summary(df)
 describe(df)
 is.na(df)
+boxplot(df$YearsExperience)
+boxplot(df$Salary)
+hist(df$YearsExperience)
+hist(df$Salary)
+plot(df$YearsExperience, df$Salary, main="Scatter Plot")
+cor(df)
 
 #Linear Regression Model
 model <- lm(Salary~YearsExperience, data=df)
