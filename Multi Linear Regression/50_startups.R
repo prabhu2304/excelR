@@ -1,5 +1,10 @@
 df <- read.csv("50_Startups.csv")
 View(df)
+library(psych)
+summary(df)
+describe(df)
+sum(is.na(df))
+
 
 #One Hot Encoding to Categorical Variable State
 install.packages("caret")
